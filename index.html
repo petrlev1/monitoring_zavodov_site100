@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+
+
+
+         <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-touch.min.js"></script>
+
+    <script src="js/kendo.all.min.js"></script>
+
+    <script src="js/ui-grid.min.js"></script>
+    <script src='js/lodash.js'></script>
+
+    <script src='js/angular-simple-logger.js'></script>
+    <script src='js/angular-google-maps.js'></script>
+
+    <script src="js/asiiu-controller.js"></script>
+
+         <script>
+  $(document).ready(function() {
+
+    $(".tab-set .block1_row").click(function() {
+        $(this).addClass("selected").siblings().removeClass("selected");
+    });
+
+    $(".tab-set .block1_row").hover(function() {
+        $(this).addClass("select_row").siblings().removeClass("select_row");
+    }, function () {
+        $(this).removeClass("select_row");
+    });
+
+
+});
+  </script>
+
+	</head>
+	<body>
+
+    <div class="header"></div>
+
+		<div class="content">
+
+        <div class="header2">
+        <div class="logo"></div>
+        <h1>Система мониторинга заводов</h1><span>Версия 2.0</span>
+
+        <div class="head_links"><a href="#">О компанииa</a><a href="#">Выход</a></div>
+
+        </div>
+
+    <div class="cont_left" id="aside1">
+
+        <nav>
+
+        <ul>
+          <li><a href="#" class="nav_open"><div>ОАО РосСпиртПром</div></a></li>
+          <div class="sub_nav">
+          <li><a href="#" class="sub_active">Крымская Водочная Компания</a></li>
+
+          <div class="sub_sub_nav">
+           <li>
+             <a href="#">000<div class="icons"><img src="css/ic1a.png"><img src="css/ic2a.png"><img src="css/ic3a.png"><img src="css/ic4a.png"><img src="css/ic5.png"></div></a></li>
+          <li><a href="#" class="sub_sub_active">001<div class="icons"><img src="css/ic_play.png"><img src="css/ic_stop_grey.png"><img src="css/ic_connect.png">
+          </div></a></li>
+          <li><a href="#">002<div class="icons"><img src="css/ic1a.png"><img src="css/ic2a.png"><img src="css/ic3.png"><img src="css/ic4.png"><img src="css/ic5a.png"></div></a></li>
+          </div>
+
+          <li><a href="#">Волгоградский ЛВЗ002<div class="icons"><img src="css/ic3.png"><img src="css/ic4.png"></div></a></li>
+          <li><a href="#">ОСП Беслан002<div class="icons"><img src="css/ic5.png"></div></a></li>
+          <li><a href="#">Спиртзавод Престиж<div class="icons"><img src="css/ic1a.png"><img src="css/ic2.png"><img src="css/ic3a.png"><img src="css/ic4.png"><img src="css/ic5a.png"></div></a></li>
+          </div>
+
+          </ul>
+
+          <ul>
+          <li><a href="#" class="nav_open">Центр ИКТ</a></li>
+          <div class="sub_nav">
+          <li><a href="#" class="sub_active">Стенд</a></li>
+
+          <div class="sub_sub_nav">
+           <li>
+             <a href="#">Шкаф 1<div class="icons"><img src="css/ic1a.png"><img src="css/ic2.png"><img src="css/ic3a.png"><img src="css/ic4a.png"><img src="css/ic5a.png"></div></a>
+             </li>
+          </div>
+
+          <li><a href="#" class="sub_active">ALCOSPOT АВТО</a></li>
+           <div class="sub_sub_nav">
+           <li>
+             <a href="#">Шкаф 2<div class="icons"><img src="css/ic1a.png"><img src="css/ic2a.png"><img src="css/ic3.png"><img src="css/ic4a.png"><img src="css/ic5a.png"></div></a>
+             </li>
+          </div>
+          </div>
+          </ul>
+
+          <ul>
+          <li><a href="#">ОАО СЭПТ<div class="icons"><img src="css/ic_error_device.png"><img src="css/ic1.png"><img src="css/ic2.png"></div></a></li>
+          </ul>
+
+          <ul>
+          <li><a href="#">ОАО СЭПТ<div class="icons"><img src="css/ic1.png"><img src="css/ic2.png"><img src="css/ic3a.png"><img src="css/ic4a.png"><img src="css/ic5.png"></div></a></li>
+          </ul>
+
+          <ul>
+          <li><a href="#">ОАО СЭПТ<div class="icons"><img src="css/ic1.png"><img src="css/ic2a.png"><img src="css/ic3.png"><img src="css/ic4.png"><img src="css/ic5a.png"></div></a></li>
+          </ul>
+
+
+        </nav>
+
+        </div>
+
+
+        <div class="cont_right">
+
+        <h1>ОАО РосСпиртПром / <strong>Крымская Водочная Компания</strong></h1>
+
+        <div class="map">
+         <img src="css/map.jpg">
+    </div>
+
+    <div class="case_tit">
+    <div>
+    Шкафы: <li><a href="#">000</a><div class="ic_noconnect"></div></li>
+    <li><a href="#" class="case_active">001</a><div class="ic_error"></div><div class="ic_noconnect"></div></li>
+    <li><a href="#">002</a></li>
+    <li><a href="#">002</a><div class="ic_error"></div></li>
+   </div>
+    <span>Номер:<strong>001</strong></span><span>Версия ПО:<strong>2.0</strong></span><span>Время последнего обновления:<strong class="case_noconnect">14.01.2016  14:03:11</strong></span>
+    </div>
+
+       <form>
+       <input type="checkbox" name="checkbox" class="openblock_check" id="block1_lines" />
+        <div class="block1 block1_lines">
+        <div class="block1_head">
+        <div class="block1_title">Линии</div>
+        <div class="block1_error"></div>
+        <label for="block1_lines" class="block1_open"></label>
+        <div class="block1_errorline"></div>
+        </div>
+        <div class="tab-set">
+          <div class="block1_table">
+            <div class="block1_row block1_row_top">
+              <div class="block1_cell"><span>Название линии</span></div><div class="block1_cell"><span>Продукт</span></div><div class="block1_cell"><span>Режим</span></div><div class="block1_cell"><span>Расход, дал/ч</span></div>
+              <div class="block1_cell"><span>Температура, C</span></div><div class="block1_cell"><span>Крепость %</span></div><div class="block1_cell"><span>Объем, дал</span></div><div class="block1_cell"><span>Безводный<br>объем, дал</span></div>
+
+            </div>
+
+            <div class="block1_row" ng-repeat="line in CurrentBox.Lines" ng-click="OnBoxLineClicked(line)">
+              <div class="block1_cell"><span>Отгрузка</span></div><div class="block1_cell"><span>Спирт люкс</span></div><div class="block1_cell"><span>Остановка</span></div>
+              <div class="block1_cell"><span>0</span></div>
+              <div class="block1_cell"><span>5.4</span></div><div class="block1_cell"><span>96.28</span></div><div class="block1_cell"><span>0</span></div><div class="block1_cell"><span>0</span></div>
+            </div>
+
+            <div class="block1_row error_line" ng-repeat="line in CurrentBox.Lines" ng-click="OnBoxLineClicked(line)">
+              <div class="block1_cell"><span><img src="css/img/ic_linerror.gif">Отгрузка</span></div><div class="block1_cell"><span>Спирт люкс</span></div><div class="block1_cell"><span>Остановка</span></div>
+              <div class="block1_cell"><span>0</span></div>
+              <div class="block1_cell"><span>5.4</span></div><div class="block1_cell"><span>96.28</span></div><div class="block1_cell"><span>0</span></div><div class="block1_cell"><span>0</span></div>
+            </div>
+
+            <div class="block1_row" ng-repeat="line in CurrentBox.Lines" ng-click="OnBoxLineClicked(line)">
+              <div class="block1_cell"><span>Отгрузка</span></div><div class="block1_cell"><span>Спирт люкс</span></div><div class="block1_cell"><span>Остановка</span></div>
+              <div class="block1_cell"><span>0</span></div>
+              <div class="block1_cell"><span>5.4</span></div><div class="block1_cell"><span>96.28</span></div><div class="block1_cell"><span>0</span></div><div class="block1_cell"><span>0</span></div>
+            </div>
+
+            <div class="block1_row" ng-repeat="line in CurrentBox.Lines" ng-click="OnBoxLineClicked(line)">
+              <div class="block1_cell"><span>Отгрузка</span></div><div class="block1_cell"><span>Спирт люкс</span></div><div class="block1_cell"><span>Остановка</span></div>
+              <div class="block1_cell"><span>0</span></div>
+              <div class="block1_cell"><span>5.4</span></div><div class="block1_cell"><span>96.28</span></div><div class="block1_cell"><span>0</span></div><div class="block1_cell"><span>0</span></div>
+            </div>
+
+          </div>
+        </div>
+        </div>
+        </form>
+
+
+       <form>
+        <input type="checkbox" name="checkbox" class="openblock_check" id="block1_devices" />
+        <div class="block1 block1_devices">
+        <div class="block1_head">
+        <div class="block1_title">Устройства</div>
+         <label for="block1_devices" class="block1_open"></label>
+        </div>
+         <div class="block1_table tab-set">
+         <div class="block1_row block1_row_top">
+         <div class="block1_cell"><span>Название</span></div><div class="block1_cell"><span>Статус</span></div><div class="block1_cell"><span>Информация</span></div>
+         </div>
+
+          <div class="block1_row block1_green_row">
+         <div class="block1_cell"><span>Модуль ввода/вывода ОВЕН МУ110 1</span></div><div class="block1_cell"><span>Подключен</span></div><div class="block1_cell"><span>От сети Заряд: 100%</span></div>
+         </div>
+
+         <div class="block1_row block1_green_row">
+         <div class="block1_cell"><span>Модуль ввода/вывода ОВЕН МУ110 1</span></div><div class="block1_cell"><span>Подключен</span></div><div class="block1_cell"><span>От сети Заряд: 100%</span></div>
+         </div>
+
+         <div class="block1_row block1_green_row">
+         <div class="block1_cell"><span>Модуль ввода/вывода ОВЕН МУ110 1</span></div><div class="block1_cell"><span>Подключен</span></div><div class="block1_cell"><span>От сети Заряд: 100%</span></div>
+         </div>
+
+         <div class="block1_row block1_green_row">
+         <div class="block1_cell"><span>Модуль ввода/вывода ОВЕН МУ110 1</span></div><div class="block1_cell"><span>Подключен</span></div><div class="block1_cell"><span>От сети Заряд: 100%</span></div>
+         </div>
+
+         <div class="block1_row block1_green_row">
+         <div class="block1_cell"><span>Модуль ввода/вывода ОВЕН МУ110 1</span></div><div class="block1_cell"><span>Подключен</span></div><div class="block1_cell"><span>От сети Заряд: 100%</span></div>
+         </div>
+
+         <div class="block1_row block1_green_row">
+         <div class="block1_cell"><span>Модуль ввода/вывода ОВЕН МУ110 1</span></div><div class="block1_cell"><span>Подключен</span></div><div class="block1_cell"><span>От сети Заряд: 100%</span></div>
+         </div>
+
+         <div class="block1_row block1_green_row">
+         <div class="block1_cell"><span>Модуль ввода/вывода ОВЕН МУ110 1</span></div><div class="block1_cell"><span>Подключен</span></div><div class="block1_cell"><span>От сети Заряд: 100%</span></div>
+         </div>
+
+         <div class="block1_row block1_green_row">
+         <div class="block1_cell"><span>Модуль ввода/вывода ОВЕН МУ110 1</span></div><div class="block1_cell"><span>Подключен</span></div><div class="block1_cell"><span>От сети Заряд: 100%</span></div>
+         </div>
+
+         </div>
+
+        </div>
+        </form>
+
+        <form>
+       <input type="checkbox" name="checkbox" class="openblock_check" id="block1_erflk" />
+       <div class="block1 block1_erflk">
+        <div class="block1_head">
+        <div class="block1_title">Ошибки ФЛК</div>
+        <div class="block1_error"></div>
+        <label for="block1_erflk" class="block1_open"></label>
+        <div class="block1_errorline"></div>
+        </div>
+         <div class="block1_table tab-set">
+         <div class="block1_row block1_row_top">
+         <div class="block1_cell"><span>Дата</span></div><div class="block1_cell"><span>Ошибка</span></div>
+         </div>
+
+          <div class="block1_row">
+         <div class="block1_cell"><span>12.04.15</span></div><div class="block1_cell"><span>Ошибка Ошибка Ошибка Ошибка Ошибка Ошибка Ошибка Ошибка Ошибка</span></div>
+         </div>
+
+         <div class="block1_row">
+         <div class="block1_cell"><span>12.04.15</span></div><div class="block1_cell"><span>Сообщение</span></div>
+         </div>
+
+         <div class="block1_row">
+         <div class="block1_cell"><span>12.04.15</span></div><div class="block1_cell"><span>Сообщение</span></div>
+         </div>
+
+         <div class="block1_row">
+         <div class="block1_cell"><span>12.04.15</span></div><div class="block1_cell"><span>Сообщение</span></div>
+         </div>
+
+         </div>
+
+        </div>
+        </form>
+
+        <form>
+       <input type="checkbox" name="checkbox" class="openblock_check" id="block1_logs" />
+       <div class="block1 block1_logs">
+        <div class="block1_head">
+        <div class="block1_title">Логи</div>
+        <label for="block1_logs" class="block1_open"></label>
+        </div>
+
+        <div class="block_calendar">
+
+         <div class="block_calendar_days"><a href="#">Месяц</a><a href="#" class="block_calendar_active">Неделя</a><a href="#">Сегодня</a></div>
+
+         <div class="block_calendar_time">
+         <span>Период:</span> <input name="" type="text"><span>&#8211;</span><input name="" type="text"> <div><a href="#" class="calendar_but">Показать</a></div>
+         </div>
+        <a href="#" class="calendar_logexp">Выгрузить логи</a>
+
+         </div>
+
+         <div class="block1_table tab-set">
+<div class="block1_row block1_row_top">
+  <div class="block1_cell"><span>Дата</span></div><div class="block1_cell"><span>Сообщение</span></div>
+</div>
+
+          <div class="block1_row">
+         <div class="block1_cell"><span>12.04.15</span></div><div class="block1_cell"><span>Сообщение Сообщение Сообщение Сообщение Сообщение Сообщение</span></div>
+         </div>
+
+         <div class="block1_row">
+         <div class="block1_cell"><span>12.04.15</span></div><div class="block1_cell"><span>Сообщение</span></div>
+         </div>
+
+         <div class="block1_row">
+         <div class="block1_cell"><span>12.04.15</span></div><div class="block1_cell"><span>Сообщение</span></div>
+         </div>
+
+         <div class="block1_row">
+         <div class="block1_cell"><span>12.04.15</span></div><div class="block1_cell"><span>Сообщение</span></div>
+         </div>
+
+         <div class="block1_row">
+         <div class="block1_cell"><span>12.04.15</span></div><div class="block1_cell"><span>Сообщение</span></div>
+         </div>
+
+         <div class="block1_row">
+         <div class="block1_cell"><span>12.04.15</span></div><div class="block1_cell"><span>Сообщение</span></div>
+         </div>
+
+         <div class="block1_row">
+         <div class="block1_cell"><span>12.04.15</span></div><div class="block1_cell"><span>Сообщение</span></div>
+         </div>
+
+         </div>
+
+      </div>
+        </form>
+
+
+
+        </div>
+
+    </div>
+
+    <script>
+(function(){  // анонимная функция (function(){ })(), чтобы переменные "a" и "b" не стали глобальными
+var a = document.querySelector('#aside1'), b = null;  // селектор блока, который нужно закрепить
+window.addEventListener('scroll', Ascroll, false);
+document.body.addEventListener('scroll', Ascroll, false);  // если у html и body высота равна 100%
+function Ascroll() {
+  if (b == null) {  // добавить потомка-обёртку, чтобы убрать зависимость с соседями
+    var Sa = getComputedStyle(a, ''), s = '';
+    for (var i = 0; i < Sa.length; i++) {  // перечислить стили CSS, которые нужно скопировать с родителя
+      if (Sa[i].indexOf('overflow') == 1 || Sa[i].indexOf('padding') == 0 || Sa[i].indexOf('border') == 0 || Sa[i].indexOf('outline') == 0 || Sa[i].indexOf('box-shadow') == 0 || Sa[i].indexOf('background') == 0) {
+        s += Sa[i] + ': ' +Sa.getPropertyValue(Sa[i]) + '; '
+      }
+    }
+    b = document.createElement('div');  // создать потомка
+    b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
+    a.insertBefore(b, a.firstChild);  // поместить потомка в цепляющийся блок первым
+    var l = a.childNodes.length;
+    for (var i = 1; i < l; i++) {  // переместить во вновь созданного потомка всех остальных потомков (итого: создан потомок-обёртка, внутри которого по прежнему работают скрипты)
+      b.appendChild(a.childNodes[1]);
+    }
+    a.style.height = b.getBoundingClientRect().height + 'px';  // если под скользящим элементом есть другие блоки, можно своё значение
+    a.style.padding = '0';
+    a.style.border = '0';  // если элементу присвоен padding или border
+  }
+  if (a.getBoundingClientRect().top <= 0) { // elem.getBoundingClientRect() возвращает в px координаты элемента относительно верхнего левого угла области просмотра окна браузера
+    b.className = 'sticky';
+  } else {
+    b.className = '';
+  }
+  window.addEventListener('resize', function() {
+    a.children[0].style.width = getComputedStyle(a, '').width
+  }, false);  // если изменить размер окна браузера, измениться ширина элемента
+}
+})()
+</script>
+
+</body>
+</html>

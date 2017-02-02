@@ -1,0 +1,17 @@
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd
+}
+
+
+a.list-group-item:focus, a.list-group-item:hover{
+    color: #555;
+    text-decoration: none;
+    background-color: #f5f5f5
+}
+
