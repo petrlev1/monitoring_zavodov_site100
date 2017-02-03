@@ -222,9 +222,7 @@ nav {
     font-weight: bold;
     margin-bottom: 60px;
     margin-top: 10px;
-}
-
-    nav ul {
+    ul {
         display: block;
         position: relative;
         padding-left: 20px;
@@ -236,13 +234,16 @@ nav {
         -webkit-transition-duration: 1s;
         -moz-transition-duration: 1s;
         transition-duration: 1s;
+        
+        &:hover { box-shadow: 0 0 10px rgba(0,0,0,0.1); }
     }
+    
+}
 
-        nav ul:hover {
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+    
 
-.allSubs { display: none; }
+.allSubs { display: block; max-height: 1px; overflow: hidden;
+transition-property: max-height; transition-duration: 0.1s;}
 
  
     .navItem1 {
@@ -275,7 +276,7 @@ nav {
 
 .navItem1check { display: none; position: absolute; top: 0; width: 100%; height: 20px; }
 .navItem1check[type="checkbox"]:checked~.navItem1 { background-image: url(nav_open.png); background-position: top 16px left; }
-.navItem1check[type="checkbox"]:checked~.allSubs { display: block }
+.navItem1check[type="checkbox"]:checked~.allSubs { max-height: 10000px; transition-duration: 5s; }
 
 
 
@@ -285,7 +286,13 @@ nav {
     margin-top: 0;
     margin-bottom: 5px;
     margin-left: 20px;
+    
+    .sub_active {
+        font-weight: bold;
+        background-image: url(nav_li_open.png);
+    }
 }
+
 
 
 
@@ -314,24 +321,19 @@ nav {
 
 .navItem2check { display: none; position: absolute; top: 0; width: 100%; height: 20px; } 
 .navItem2check[type="checkbox"]:checked~.navItem2 { font-weight: bold; background-image: url(nav_li_open.png);}
-.navItem2check[type="checkbox"]:checked~.sub_sub_nav { display: block}
+.navItem2check[type="checkbox"]:checked~.sub_sub_nav { max-height: 10000px; transition-duration: 5s; }
 
        
 
-
-
-    .sub_nav .sub_active {
-        font-weight: bold;
-        background-image: url(nav_li_open.png);
-    }
-
 .sub_sub_nav {
-    display: none;
+    display: block;
     font-size: 12px;
     font-weight: 100;
     margin-left: 25px;
     margin-top: 0;
     margin-bottom: 0;
+    max-height: 1px; overflow: hidden;
+transition-property: max-height; transition-duration: 0.1s;
     
     a { display: block;
         background-image: none;
@@ -351,19 +353,22 @@ nav {
             border-bottom-color: #c8d1f3;
         }
     }
-}
-
-
-
-    .sub_sub_nav div {
+    
+    div {
         background-position: top 1px right;
     }
-
-    .sub_sub_nav .sub_sub_active {
+    
+    .sub_sub_active {
         font-size: 12px;
         color: #000;
         font-weight: bold;
     }
+}
+
+
+
+
+
 
 
 

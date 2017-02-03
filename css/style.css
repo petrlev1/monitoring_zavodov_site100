@@ -199,25 +199,27 @@ nav {
   font-weight: bold;
   margin-bottom: 60px;
   margin-top: 10px; }
-
-nav ul {
-  display: block;
-  position: relative;
-  padding-left: 20px;
-  padding-right: 25px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  margin-top: 0;
-  margin-bottom: 0;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  transition-duration: 1s; }
-
-nav ul:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+  nav ul {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 25px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: 0;
+    margin-bottom: 0;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    transition-duration: 1s; }
+    nav ul:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
 
 .allSubs {
-  display: none; }
+  display: block;
+  max-height: 1px;
+  overflow: hidden;
+  transition-property: max-height;
+  transition-duration: 0.1s; }
 
 .navItem1, .navItem1Open {
   display: block;
@@ -256,7 +258,8 @@ nav ul:hover {
   background-position: top 16px left; }
 
 .navItem1check[type="checkbox"]:checked ~ .allSubs {
-  display: block; }
+  max-height: 10000px;
+  transition-duration: 5s; }
 
 .sub_nav {
   display: block;
@@ -266,6 +269,9 @@ nav ul:hover {
   margin-top: 0;
   margin-bottom: 5px;
   margin-left: 20px; }
+  .sub_nav .sub_active {
+    font-weight: bold;
+    background-image: url(nav_li_open.png); }
 
 .navItem2 {
   display: block;
@@ -300,19 +306,20 @@ nav ul:hover {
   background-image: url(nav_li_open.png); }
 
 .navItem2check[type="checkbox"]:checked ~ .sub_sub_nav {
-  display: block; }
-
-.sub_nav .sub_active {
-  font-weight: bold;
-  background-image: url(nav_li_open.png); }
+  max-height: 10000px;
+  transition-duration: 5s; }
 
 .sub_sub_nav {
-  display: none;
+  display: block;
   font-size: 12px;
   font-weight: 100;
   margin-left: 25px;
   margin-top: 0;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  max-height: 1px;
+  overflow: hidden;
+  transition-property: max-height;
+  transition-duration: 0.1s; }
   .sub_sub_nav a {
     display: block;
     background-image: none;
@@ -328,14 +335,12 @@ nav ul:hover {
     text-decoration: none; }
     .sub_sub_nav a:hover {
       border-bottom-color: #c8d1f3; }
-
-.sub_sub_nav div {
-  background-position: top 1px right; }
-
-.sub_sub_nav .sub_sub_active {
-  font-size: 12px;
-  color: #000;
-  font-weight: bold; }
+  .sub_sub_nav div {
+    background-position: top 1px right; }
+  .sub_sub_nav .sub_sub_active {
+    font-size: 12px;
+    color: #000;
+    font-weight: bold; }
 
 .ic_nav_error {
   display: block;
