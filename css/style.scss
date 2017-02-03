@@ -645,3 +645,69 @@ transition-property: max-height; transition-duration: 0.1s;
 .error_row_div {
     background: red;
 }
+
+.color-yellow {
+    background-color: yellow;
+}
+
+
+
+.admin_left{
+    margin-top: 20px;
+    display: block;
+    float: left;
+    width: 20%;
+}
+
+.admin_table{      
+    width: 70%;
+    margin: 20px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 16px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table_head{
+    background: #6386db;
+    color: white;
+    padding: 10px 20px;
+}
+
+.table_body{
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;    
+    background: #D8E6F3;
+    padding: 10px 20px;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.standardError h2, h3, h4 {
+    text-align:center;
+}
+
+.commonError h4 {
+    text-align:center;
+}
+
+.errorNumber{
+    margin-top: 100px;
+    height: 150px;
+    text-align:center;
+    font-family:'Lucida Sans';
+    font-size:100px;
+}
+
+.errorNumber h2 {
+    color: #6386db;
+}
+
+
+.field-validation-error {
+    color: #f00;
+}
